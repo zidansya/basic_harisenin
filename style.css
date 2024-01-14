@@ -1,0 +1,198 @@
+:root {
+  --primary: #b6895b;
+
+  --bg: #010101;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+body {
+  font-family: "poppins", sans-serif;
+  background-color: #e0c0a0;
+  color: #fff;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(1, 1, 1, 0.8);
+  align-items: center;
+  padding: 1.4rem 7%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #b6895b;
+  font-style: italic;
+}
+.navbar .navbar-logo span {
+  color: #fff;
+}
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+.navbar .navbar-nav a:hover {
+  color: #b6895b;
+}
+.navbar .navbar-nav a:after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5 rem;
+  border-bottom: 0.1rem solid #b6895b;
+  transform: scalex(0);
+  transition: 0.2s linear;
+}
+.navbar .navbar-nav a:hover:after {
+  transform: scalex(0.5);
+}
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+.navbar .navbar-extra a:hover {
+  color: #b6895b;
+}
+.btn-signin {
+  display: inline-block;
+  padding: 5px 15px;
+  text-decoration: none;
+  border-style: ridge;
+  border-color: #b6895b; /* red */ /* Green color, you can change it */
+  color: #fff; /* White text color */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+  margin: 0 10px; /* Add margin to separate buttons */
+}
+.btn-daftar {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+}
+.btn-signin:hover {
+  background-color: #46403d; /* Darker green on hover, you can change it */
+}
+.btn-daftar:hover {
+  color: #f5efef;
+}
+
+/* Change the background color on hover */
+
+#menu {
+  display: none;
+}
+.hero {
+  /* min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;*/
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  position: relative;
+  justify-content: space-between;
+}
+.home-img {
+  width: 550px;
+  height: 400px;
+  object-fit: contain;
+}
+.hero .content {
+  max-width: 60rem;
+  padding-left: 15vh;
+}
+.hero .content h3 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  color: #151601;
+}
+.hero .content p {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  line-height: 1.8;
+  color: #151601;
+}
+.btn {
+  display: inline-block;
+  padding: 5px 10px;
+  text-decoration: none;
+  background-color: #3498db; /* Set the background color */
+  color: black; /* Set the text color */
+  border-radius: 5px; /* Add rounded corners */
+  transition: background-color 0.5s ease; /* Add a smooth transition effect */
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.btn:hover {
+  background-color: #2980b9;
+}
+.bawah {
+  position: fixed;
+  padding-left: 15vh;
+  bottom: 40px;
+  width: 170px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.bawah a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.bawah a i {
+  font-size: 24px;
+}
+
+.bawah p {
+  margin: 0 10px;
+  color: #555;
+}
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* tablet*/
+@media (max-width: 758px) {
+  html {
+    font-size: 62%;
+  }
+  #menu {
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+  }
+  .navbar .navbar-nav .active {
+    right: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
